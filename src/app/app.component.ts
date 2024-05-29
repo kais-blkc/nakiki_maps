@@ -7,17 +7,17 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 
 @Component({
-	selector: 'app-root',
-	standalone: true,
-	imports: [
-		RouterOutlet,
-		MapComponent,
-		ToolbarComponent,
-		MatButtonModule,
-		MatSidenavModule,
-		MatIconModule,
-	],
-	templateUrl: './app.component.html',
-	styleUrl: './app.component.scss',
+  selector: 'app-root',
+  standalone: true,
+  imports: [
+    RouterOutlet,
+    MapComponent,
+    ToolbarComponent,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+  ],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {}

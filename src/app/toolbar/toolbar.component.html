@@ -1,26 +1,35 @@
 <div class="toolbar">
-	<h2 [style.textAlign]="'center'">Nakiki Map</h2>
+  <h2 [style.textAlign]="'center'">Nakiki Map</h2>
 
-	<button mat-button (click)="setDrawMode('draw_polygon')">
-		<mat-icon fontIcon="draw"></mat-icon>
-		Многоугольник
-	</button>
+  <button mat-button (click)="setDrawMode('draw_polygon')">
+    <mat-icon fontIcon="draw"></mat-icon>
+    Полигон
+  </button>
 
-	<button mat-button (click)="deleteDraw()">
-		<mat-icon fontIcon="delete"></mat-icon>
-		Удалить
-	</button>
+  <button mat-button (click)="deleteDraw()">
+    <mat-icon fontIcon="delete"></mat-icon>
+    Удалить
+  </button>
 
-	<button mat-button (click)="deleteDrawAll()">
-		<mat-icon fontIcon="delete_forever"></mat-icon>
-		Удалить все
-	</button>
+  <button mat-button (click)="deleteDrawAll()">
+    <mat-icon fontIcon="delete_forever"></mat-icon>
+    Удалить все
+  </button>
+
+  <div class="polygon-slider-height">
+    <div class="psh__title">
+      <label id="example-name-label" class="example-name-label">Высота фигуры: </label>
+      <label class="example-value-label">{{ slider.value }}</label>
+    </div>
+    <mat-slider
+      class="psh__slider"
+      [max]="50"
+      [min]="0"
+      [step]="1"
+      [discrete]="false"
+      [showTickMarks]="false"
+    >
+      <input matSliderThumb [(ngModel)]="poligonHeight" (input)="setHeight()" #slider />
+    </mat-slider>
+  </div>
 </div>
-
-<!-- <input
-	type="range"
-	min="0"
-	max="50"
-	(input)="setExtrudeHeight()"
-	[(ngModel)]="poligonHeight"
-/> -->

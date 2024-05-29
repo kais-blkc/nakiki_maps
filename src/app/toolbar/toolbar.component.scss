@@ -1,7 +1,27 @@
 .toolbar {
-	padding: 30px 10px;
-	display: flex;
-	flex-direction: column;
-	gap: 5px;
-	max-width: 250px;
+  max-width: 250px;
+  padding: 30px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  overflow: hidden;
+
+  .mat-mdc-button {
+    justify-content: flex-start !important;
+    text-align: left;
+  }
+
+  .polygon-slider-height {
+    margin-top: 30px;
+
+    .psh__title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .psh__slider {
+      width: 88%;
+    }
+  }
 }
