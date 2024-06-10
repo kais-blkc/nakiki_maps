@@ -1,10 +1,10 @@
 import { environment } from '../../environments/environment';
-import mapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 import { ElementRef, Injectable } from '@angular/core';
 import { IMapFeature } from '../types/map.interface';
 import mapboxDraw from '@mapbox/mapbox-gl-draw/';
-import * as geojson from 'geojson';
+import mapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
 import mapboxgl from 'mapbox-gl';
+import * as geojson from 'geojson';
 
 @Injectable({ providedIn: 'root' })
 export class MapService {
